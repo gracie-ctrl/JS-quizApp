@@ -14,36 +14,54 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <title>Quiz</title>
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Page title -->
+    <title>Quiz App</title>
   </head>
+
   <body>
-    <div class="container m-5" id="start">
+    <div class="container" id="start">
       <div class="card" style="width: 18rem">
         <div class="card-body">
-          <h5 class="card-title">Test your knowledge</h5>
-          <p class="card-text">Some quick description about the quiz .</p>
-          <a class="btn btn-primary">Start</a>
+          <h4 class="card-title flex-center">Test your knowledge</h4>
+          <h6 class="card-text">Quiz Rules</h6>
+          <br>
+          <ul>
+            <p>You have 60 seconds to answer 5 questions</p>
+            <p>Good luck!</p>
+          </ul>
+          <a class="btn btn-primary" id="btnStart">Start</a>
         </div>
       </div>
     </div>
 
     <!-- (B) QUIZ CONTAINER -->
     <div class="container" id="quizBlock" style="display: none">
-      <div class="mb-5">
+      <div class="mb-5 flex-center flex-column">
         <h2>Test your knowledge</h2>
         - Time remaining <span id="time">01:00</span>
       </div>
       <div id="quizWrap"></div>
 
       <div>
+        <button type="reset" class="btn btn-primary" id="btnReset">
+          Reset Quiz
+        </button>
         <button type="button" class="btn btn-primary" id="btnSubmit">
           Submit Quiz
         </button>
-        <button type="button" class="btn btn-primary" id="btnReset">
-          Reset Quiz
-        </button>
         <span id="score"></span>
       </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-section">
+      <footer id="footer">
+        <span>© 2022 gracie-ctrl</span>
+      </footer>
     </div>
 
     <!-- Optional JavaScript -->
